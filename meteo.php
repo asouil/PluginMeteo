@@ -56,10 +56,11 @@ class Meteo
         $wpdb->query("DROP TABLE IF EXISTS".$wpdb->prefix."meteo;");
     }
 
-    public static function desactivate()
+    public function desactivate()
     {
     }
-    public static function menuHtml(){
+
+    public function menuHtml(){
         echo '<h1>'.get_admin_page_title().'</h1>';
         echo '<p> Page du Plugin Meteo !!! </p>';
         echo '<h1>La ville</h1>'; 
@@ -77,7 +78,7 @@ class Meteo
     
     }
 
-    public static function menuHtmlInit(){ 
+    public function menuHtmlInit(){ 
         //global $wpdb; 
         echo "Réinitialiser
         <form method='POST' action='#'>
