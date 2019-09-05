@@ -1,0 +1,91 @@
+* {
+    color:#ffffff;
+    font-family: 'BebasNeueBold', sans-serif;
+    margin:0;
+}
+
+body {
+    width : 50vw;
+    margin: 5%;
+    height : 75vh;
+    display: flex;
+    background-color:#00728B;
+    background: linear-gradient( #00728B, #3EC9BF);
+    background: -webkit-linear-gradient (#00728B, #3EC9BF);
+
+}
+
+.card {
+    width : 50vw;
+    padding-left: 20px;
+    background-color: rgb(255, 255, 255,0.2);
+    box-shadow : rgb(10, 10, 25, 0.3) 0 0px 20px 10px;
+    border-radius : 10px;
+    flex-wrap: wrap;
+}
+
+.gauche span {
+    font-family: 'Roboto-Light', monospace;
+}
+
+.haut {
+    width : 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.haut h2 {
+    font-size: 67px;
+}
+.haut p {
+    margin-top: 20px;
+    margin-right: 20px;
+    font-size : 35px;
+}
+.gauche {
+    display: flex;
+    flex-direction : column;
+}
+
+.gauche p {
+    font-size : 26px;
+}
+
+.gauche span {
+    font-size : 18px;
+}
+.sky_temp {
+    font-size: 175px;
+}
+h3 {
+    font-size: 40px;
+}
+
+.humidity {
+    font-size: 26px;
+    
+}
+.humidity span {
+    font-size: 19px;
+}
+.bas_carte { 
+    display: flex;
+    flex-direction : column;
+    justify-content: center;
+    margin-top: -100px;
+    margin-bottom : 20px;
+    padding-bottom: 20px;
+    margin-left: 150px;
+}
+
+.sky_temp {
+    display : flex;
+    justify-content: center;
+}
+.bas_carte .ciel {
+    display:flex;
+    font-size: 44px;
+    letter-spacing: 1;
+    justify-content: center;
+    margin-top: -18px;
+}

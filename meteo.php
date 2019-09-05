@@ -97,7 +97,7 @@ register_uninstall_hook(__FILE__, array('Meteo','uninstall'));
 $met= new Meteo;
 
 class affichageMeteo extends WP_Widget {
-    
+    private $local;
     private $humidity;
     private $temp;
     private $wind;
@@ -106,19 +106,21 @@ class affichageMeteo extends WP_Widget {
     private $min;
     private $max;
 
-    public function __construct($ville="Moulins"){
+    public function __construct(){
         parent::__construct('idAffichageMeteo', 'affichageMeteo', array('description' => 'plugin meteo'));
         require_once 'config.php';
-        $this->ville=$ville;
+        $ville='Montlucon';
         $this->url="http://api.openweathermap.org/data/2.5/find?q=".$ville."&units=metric&type=accurate&mode=xml&APPID=".$appid."&lang=FR";
-        $w=simplexml_load_file($this->url);
-        $this->humidity=$w->list->item->humidity['value'];
-        $this->temp=$w->list->item->temperature['value'];
-        $this->min=$w->list->item->temperature['min'];
-        $this->max=$w->list->item->temperature['max'];
-        $this->wind=$w->list->item->wind->speed['value'];
-        $this->sky=$w->list->item->weather['value'];
-        }
+        $w=wp_remote_request($this->url, array('method' =>'GET'));
+        var_dump($w);
+    }
+
+    public function remplir($ville){
+        $this->ville=$ville;
+        
+        //$this->humidity=$this->w->list->item->humidity['value'];
+        
+    }    
         
     public function widget($args, $instance){
         echo '
@@ -131,41 +133,6 @@ class affichageMeteo extends WP_Widget {
         <div class="temperature"><p>'.$this->sky.'</p><p>'.$this->temp.'°C </p></div>
         </div>';
         
-    }
-
-    public function humidity($url){
-        $getweather=simplexml_load_file($url);
-        $gethumidity= $getweather->list->item->humidity['value'];
-        $this->humidity=$gethumidity;
-    }
-    public function temp($url){
-        $getweather=simplexml_load_file($url);
-        $gettemp= $getweather->list->item->temperature['value'];
-        $this->temp=$gettemp;
-    }
-
-    public function tempmin($url){
-        $getweather=simplexml_load_file($url);
-        $gettemp= $getweather->list->item->temperature['min'];
-        $this->min=$gettemp;
-    }
-
-    public function tempmax($url){
-        $getweather=simplexml_load_file($url);
-        $gettemp= $getweather->list->item->temperature['max'];
-        $this->max=$gettemp;
-    }
-
-    public function wind($url){
-        $getweather=simplexml_load_file($url);
-        $getwind= $getweather->list->item->speed['value'];
-        $this->wind=$getwind;
-    }
-
-    public function sky($url) {
-        $getweather=simplexml_load_file($url);
-        $sky= $getweather->list->item->weather['value'];
-        $this->sky=$sky;
     }
     
 }
