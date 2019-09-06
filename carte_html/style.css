@@ -21,19 +21,19 @@
     background: -moz-linear-gradient (#00728B, #3EC9BF);
     background: -o-linear-gradient (#00728B, #3EC9BF);
     flex-direction: column;
-    padding: 10px;
-    width : 53vw;
-    height : 75vh;
+    padding: 2%;
+    width : 500px;
+    height : 300px;
     display: flex;
+    overflow: hidden;
 }
-
 
 .card {
     background-color: rgb(255, 255, 255, 0.2);
     box-shadow : rgb(10, 10, 25, 0.3) 0 0px 20px 10px;
-    background: radial-gradient(ellipse farthest-corner at 120% 100%, rgb(71, 176, 168, 0.3) 70%, rgb(000,255,255, 0.3) 10%, rgb(255,255,255, 0.3) 50%);
-    margin: 1.5%;
-    width : 50vw;
+    background: radial-gradient(ellipse farthest-corner at 120% 100%, rgb(71, 176, 168, 0.3) 70%, rgb(000,255,255, 0.3) 10%, rgb(255,255,255, 0.2) 50%);
+    margin: 2%;
+    width : 90%;
     padding-left: 4%;
     padding-top: 3%;
     border-radius : 10px;
@@ -46,12 +46,12 @@
     justify-content: space-between;
 }
 .haut h2 {
-    font-size: 67px;
+    font-size: 4em;
 }
 .haut p {
     margin-top: 2%;
     margin-right: 5%;
-    font-size : 35px;
+    font-size : 2em;
 }
 
 .gauche {
@@ -59,63 +59,60 @@
     flex-direction : column;
 }
 
-.gauche p {
-    font-size : 26px;
+.gauche p, .humidity {
+    font-size : 1.6em;
 }
 
-.gauche span {
-    font-size : 18px;
+.gauche span, .humidity span {
+    font-size : 1.2em;
 }
 
-h3 {
-    font-size: 40px;
+.jour {
+    font-size: 2em;
 }
 
-.humidity {
-    font-size: 26px;
-    
-}
-.humidity span {
-    font-size: 19px;
-}
 .bas_carte { 
     display: flex;
     flex-direction : column;
     justify-content: center;
-    margin-top: -100px;
-    margin-bottom : 20px;
-    padding-bottom: 20px;
-    margin-left: 80px;
-}
-
-.sky_temp i {
-    transform: scaleX(-1);
-    font-size: 200px;
-    margin-top: -23px;
-    margin-right: 20px;
-    margin-left: -20px;
+    margin-top: -2%;
+    margin-bottom : 1%;
+    padding-bottom: 1em;
+    margin-left: 7%;
 }
 
 .sky_temp {
-    font-size: 175px;
+    font-size: 7.5em;
     display : flex;
     justify-content: center;
+    margin-left: -10%;
 }
-
+.sky_temp i {
+    transform: scaleX(-1);
+    font-size: 1.2em;
+    margin-top: -5%;;
+    margin-right: 4%;
+    margin-left: -4%;
+}
 .ciel {
     display:flex;
-    font-size: 45px;
+    font-size: 1.9em;
     letter-spacing: 1;
     justify-content: center;
-    margin-top: -18px;
+    margin-top: 0%;
 }
 
 .temperature {
-    margin-right: 2px;
+    margin-right: 0.3%;
 }
 
 .center {
     display: flex;
     justify-content: center;
-    margin-top: 3px;
+    margin-top: 0.1%;
+}
+
+.bas {
+    display: flex;
+    justify-content: space-between;
 }
