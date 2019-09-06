@@ -1,10 +1,7 @@
 body {
     margin: 0;
     font-family: "bebas-neue-by-fontfabric";
-}
-
-.debug {
-    border: 1px solid red;
+    background-color: #0aa6ea;
 }
 
 .widget {
@@ -18,6 +15,7 @@ body {
     background: linear-gradient(to bottom, #1d5988 0%,#2f6ea5 50%, #3e7cb6 100%);
     color: #ffffff;
     box-shadow: 0 0 8px 5px #5f6f88;
+    overflow: hidden;
 } 
 
 .haute {
@@ -64,8 +62,8 @@ body {
             flex-direction: column;
         }
         .jour {
-        font-size: 1.7em;
-        font-weight: 400;
+            font-size: 1.7em;
+            font-weight: 400;
         }
         .prec {
             font-size: 1em;
@@ -74,15 +72,17 @@ body {
         .tempmoyen {
             display: flex;
             flex-direction: row;
+            margin: 4% 0;
         }
         .tempmin, .tempmax {
             display : flex;
             flex-direction: row;
             padding-top: 2%;
+            align-items: center;
         }
         .tempmin i, .tempmax i {
-            margin-right: 10%;
-            margin-left: 10%;
+            font-size:0.3em;
+            margin: 0 10%;
         }
         .tempmax {
             margin-left: 5%;
@@ -91,29 +91,26 @@ body {
             font-size:4em;
             font-weight: 700;
             display: flex;
-            padding-top: 7%;
+            padding-top: 5%;
         }
-
     .ciel {
         display: flex;
         justify-content: center;
         flex-direction: column;
-        
+        margin-right: 10%;
     }
         .icon {
             display: flex;
             font-size: 6em;
             margin-top: 20%;
-            margin-right: 20%;
         }
         .desc {
-        
             text-align: center;
         }
 
 .bas {
     height : 50%;
-    
+    background: linear-gradient(to bottom rgb(255,255,255,0.1), rgb(0,0,0,0.1));
 }
     .lendemain {
         width: 100%;
@@ -139,7 +136,7 @@ body {
         justify-content: space-around;
         
     }
-    .wi {
+    .temps .wi {
         width: 50%;
     }
     .temperature {
@@ -147,10 +144,18 @@ body {
         text-align: center;
         padding-top: 3%; 
     }
-
-
-
-
-
-
-
+    .sur {
+        background: linear-gradient(to bottom, #1e5986 0%, #3674ad 100%); 
+    }
+    .trois {
+        background: linear-gradient(to bottom, #1b5074 0%, #336fa6 100%);
+    }
+    .quatre {
+        background: linear-gradient(to bottom, #1a4c73 0%, #316b9e 100%);
+    }
+    .cinq {
+        background: linear-gradient(to bottom, #143b5d 0%, #2a5c88 100%);     
+    }
+    .der {
+        background: linear-gradient(to bottom, #143b59 0%, #295984 100%); 
+    }
